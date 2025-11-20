@@ -1,4 +1,4 @@
-// index.js
+// index.js - the main file to start the Discord bot
 require("dotenv").config();
 const { Client, GatewayIntentBits, Events } = require("discord.js");
 const fs = require("fs");
