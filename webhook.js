@@ -3,7 +3,8 @@ const crypto = require("crypto");
 const { exec } = require("child_process");
 const bodyParser = require("body-parser");
 
-const SECRET = "discordj2cbot69"; // change this
+require("dotenv").config();
+const SECRET = process.env.WEBHOOK_SECRET;
 
 function verify(sig, payload) {
   const hmac = crypto.createHmac("sha256", SECRET);
