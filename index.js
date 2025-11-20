@@ -8,7 +8,7 @@ const client = new Client({
   intents: [GatewayIntentBits.Guilds, GatewayIntentBits.GuildVoiceStates],
 });
 
-// Load event files
+// Load event files- the events are stored in the events folder.
 client.events = new Map();
 const eventsPath = path.join(__dirname, "events");
 for (const file of fs.readdirSync(eventsPath)) {
